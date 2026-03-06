@@ -1,0 +1,30 @@
+@import '../../styles/variables.less';
+
+.otp-input-container {
+  display: flex;
+  gap: 52px;
+  justify-content: flex-start;
+}
+
+.otp-input {
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  font-size: @font-size-xl;
+  font-weight: 600;
+  color: @text-dark;
+  background: @bg-white;
+  border: 2px solid @border-color;
+  border-radius: @radius-sm;
+  outline: none;
+  transition: all @transition-base;
+
+  &:hover {
+    border-color: @primary-blue;
+  }
+
+  &:focus {
+    border-color: @border-active;
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  }
+}

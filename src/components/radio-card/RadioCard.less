@@ -1,0 +1,72 @@
+@import '../../styles/variables.less';
+
+.radio-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: @bg-white;
+  border: 2px solid @border-color;
+  border-radius: @radius-md;
+  cursor: pointer;
+  transition: all @transition-base;
+  outline: none;
+
+  &:hover {
+    border-color: @primary-blue;
+    box-shadow: 0 2px 8px rgba(0, 102, 255, 0.1);
+  }
+
+  &:focus {
+    border-color: @primary-blue;
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  }
+
+  &-checked {
+    border-color: @primary-blue;
+    background: rgba(0, 102, 255, 0.02);
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      path {
+        fill: @text-medium;
+        transition: fill @transition-base;
+      }
+    }
+
+    &-active svg path {
+      fill: @primary-blue;
+    }
+  }
+
+  &-label {
+    font-size: @font-size-base;
+    font-weight: 600;
+    color: @text-dark;
+  }
+
+  &-check {
+    width: 24px;
+    height: 24px;
+    background: @primary-blue;
+    border-radius: @radius-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: checkIn 0.2s ease;
+  }
+}

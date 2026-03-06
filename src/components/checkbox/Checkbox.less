@@ -1,0 +1,28 @@
+@import '../../styles/variables.less';
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  background: @bg-white;
+  border: 2px solid @border-color;
+  border-radius: @radius-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all @transition-base;
+
+  &-checked {
+    background: @primary-blue;
+    border-color: @primary-blue;
+    animation: checkIn 0.2s ease;
+  }
+}
+
+@keyframes checkIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
